@@ -6,7 +6,7 @@ const String kStringYes = 'Yes';
 const String kStringNo = 'No';
 
 const List<String> kStringListDropDown = [
-  "Cultural fit",
+  "Cultural Fit",
   "Introduction Call",
-  "Technical assessment",
+  "Technical Assessment",
 ];
