@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 import 'package:http/http.dart';
 import 'package:technical_assessement/constants/apis.dart';
 import 'package:technical_assessement/models/slot.dart';

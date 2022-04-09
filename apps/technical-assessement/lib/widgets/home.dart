@@ -1,10 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:technical_assessement/constants/strings.dart';
 import 'package:technical_assessement/constants/colors.dart';
-import 'package:technical_assessement/models/slot.dart';
-import 'package:technical_assessement/services/network.dart';
+import 'package:technical_assessement/widgets/alert.dart';
 import 'calendar.dart';
 import 'drop_down.dart';
 import 'radio.dart';
@@ -56,10 +53,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   icon: const Icon(Icons.check),
                   onPressed: () => {
                     setState(() {
-                      if (_calendar.selectedDate == null)
-                        print('Please select a date');
-                      else
+                      if (_calendar.selectedDate == null) {
+                        showAlertDialog(context);
+                      } else {
                         print('click on: ${_dropDownQuestion.motive} - ${_radioButtonQuestion.isNewPatient} => ${_calendar.selectedDate}');
+                      }
                     })
                   },
                   style: ButtonStyle(
