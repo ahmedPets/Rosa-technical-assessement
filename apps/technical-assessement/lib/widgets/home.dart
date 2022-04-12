@@ -54,9 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () => {
                     setState(() {
                       if (_calendar.selectedDate == null) {
-                        showAlertDialog(context);
+                        showAlertDialog(context, null);
                       } else {
-                        print('click on: ${_dropDownQuestion.motive} - ${_radioButtonQuestion.isNewPatient} => ${_calendar.selectedDate}');
+                        showAlertDialog(context, '${_dropDownQuestion.motive} - ${_radioButtonQuestion.isNewPatient} => ${_calendar.selectedDate}');
                       }
                     })
                   },

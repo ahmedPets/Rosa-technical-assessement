@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:technical_assessement/constants/colors.dart';
 import 'package:technical_assessement/constants/strings.dart';
 
-showAlertDialog(BuildContext context) {  
+showAlertDialog(BuildContext context, String? message) {
   // Create button  
   Widget okButton = ElevatedButton(
     style: ButtonStyle(
@@ -10,14 +10,14 @@ showAlertDialog(BuildContext context) {
     ),
     child: const Text(kStringOk),
     onPressed: () {  
-      Navigator.of(context).pop();  
+      Navigator.of(context).pop();
     },  
   );  
   
   // Create AlertDialog  
   AlertDialog alert = AlertDialog(  
     // title: Text("Simple Alert"),  
-    content: const Text(kStringSelectionDate),
+    content: message != null ? Text(message) : const Text(kStringSelectionDate),
     actions: [  
       okButton,  
     ],  
